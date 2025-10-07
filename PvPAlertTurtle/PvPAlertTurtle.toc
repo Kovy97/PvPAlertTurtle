@@ -1,0 +1,7 @@
+## Interface: 11200
+## Title: PvPAlertTurtle (Vanilla 1.12)
+## Notes: Alert only when target (player or NPC) is PvP-flagged AND from opposing faction
+## Author: Chadjibbidy
+## Version: 1.7
+PvPAlertTurtle.xml
+PvPAlertTurtle.lua

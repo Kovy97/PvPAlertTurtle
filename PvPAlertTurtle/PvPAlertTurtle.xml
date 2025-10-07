@@ -1,0 +1,25 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Frame name="PvPAlertTurtleFrame" hidden="true">
+    <Scripts>
+      <OnLoad>
+        this:RegisterEvent("PLAYER_TARGET_CHANGED");
+        this:RegisterEvent("UNIT_FACTION");
+        this:RegisterEvent("PLAYER_ENTERING_WORLD");
+      </OnLoad>
+      <OnEvent>
+        PvPAlertTurtle_OnEvent(event, arg1);
+      </OnEvent>
+    </Scripts>
+  </Frame>
+
+  <MessageFrame name="PvPAlertTurtleMessage" parent="UIParent" frameStrata="HIGH" insertMode="TOP" fading="true">
+    <Size><AbsDimension x="512" y="64"/></Size>
+    <Anchors>
+      <Anchor point="TOP" relativeTo="UIParent" relativePoint="TOP">
+        <Offset><AbsDimension x="0" y="-180"/></Offset>
+      </Anchor>
+    </Anchors>
+    <FontString inherits="GameFontNormalHuge"/>
+  </MessageFrame>
+</Ui>
